@@ -1,38 +1,38 @@
 <?php
-require_once 'config.php';
-session_start();
+// require_once 'config.php';
+// session_start();
 
-if (empty($_SESSION['id']) && empty($_SESSION['name'])){
-  header("Location: index.php");
-  exit;
-}
-else{
-	//echo $_SESSION['id'];
+// if (empty($_SESSION['id']) && empty($_SESSION['name'])){
+//   header("Location: index.php");
+//   exit;
+// }
+// else{
+// 	//echo $_SESSION['id'];
 	
 
-  $fetch_user= mysqli_query($conn,"SELECT * FROM `cat` ");
-  $catCount = mysqli_num_rows($fetch_user);
-  $dataemail= mysqli_fetch_array($fetch_user,MYSQLI_ASSOC);
-///////////////////////////////////////////FACEBOOK USERS///////////////////////////////////
-  $fb="fb";
-  $fetchfb_user= mysqli_query($conn,"SELECT * FROM `place`");
-  $placeCount = mysqli_num_rows($fetchfb_user);
-//$datafb= mysqli_fetch_array($fetchfb_user,MYSQLI_ASSOC);
-  $fetchfb_item= mysqli_query($conn,"SELECT * FROM `area`");
-  $areaCount = mysqli_num_rows($fetchfb_item);
+//   $fetch_user= mysqli_query($conn,"SELECT * FROM `cat` ");
+//   $catCount = mysqli_num_rows($fetch_user);
+//   $dataemail= mysqli_fetch_array($fetch_user,MYSQLI_ASSOC);
+// ///////////////////////////////////////////FACEBOOK USERS///////////////////////////////////
+//   $fb="fb";
+//   $fetchfb_user= mysqli_query($conn,"SELECT * FROM `place`");
+//   $placeCount = mysqli_num_rows($fetchfb_user);
+// //$datafb= mysqli_fetch_array($fetchfb_user,MYSQLI_ASSOC);
+//   $fetchfb_item= mysqli_query($conn,"SELECT * FROM `area`");
+//   $areaCount = mysqli_num_rows($fetchfb_item);
 
-  $fetchUPlace= mysqli_query($conn,"SELECT * FROM `uplace`");
-  $uPlaceCount = mysqli_num_rows($fetchUPlace);
+//   $fetchUPlace= mysqli_query($conn,"SELECT * FROM `uplace`");
+//   $uPlaceCount = mysqli_num_rows($fetchUPlace);
 
-  $fetchUser= mysqli_query($conn,"SELECT * FROM `user`");
-  $userCount = mysqli_num_rows($fetchUser);
-    $fetchGroup= mysqli_query($conn,"SELECT * FROM `group`");
-  $groupCount = mysqli_num_rows($fetchGroup);
+//   $fetchUser= mysqli_query($conn,"SELECT * FROM `user`");
+//   $userCount = mysqli_num_rows($fetchUser);
+//     $fetchGroup= mysqli_query($conn,"SELECT * FROM `group`");
+//   $groupCount = mysqli_num_rows($fetchGroup);
 
-      $fetchEvent= mysqli_query($conn,"SELECT * FROM `group_event`");
-  $eventCount = mysqli_num_rows($fetchEvent);
-//////////////////////////////////////////GOOGLE USERS////////////////////////////////////
-}
+//       $fetchEvent= mysqli_query($conn,"SELECT * FROM `group_event`");
+//   $eventCount = mysqli_num_rows($fetchEvent);
+// //////////////////////////////////////////GOOGLE USERS////////////////////////////////////
+// }
 
 ?>
 
@@ -184,7 +184,7 @@ else{
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img src="admin.png" class="user-image" alt="User Image">
-            <span class="hidden-xs"><?php echo $_SESSION['name']; ?> <i class="fa fa-caret-square-o-down fa-4"></i></span>
+            <span class="hidden-xs"><!-- <?php echo $_SESSION['name']; ?>  --><i class="fa fa-caret-square-o-down fa-4"></i></span>
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
@@ -192,10 +192,10 @@ else{
               <img src="admin.png" class="img-circle" alt="User Image">
 
               <p>
-                <?php echo $_SESSION['name'].'<br>';?>
+                <!-- <?php echo $_SESSION['name'].'<br>';?> -->
 
 
-                <small><?php echo $_SESSION['email'];?></small>
+                <small><!-- <?php echo $_SESSION['email'];?> --></small>
               </p>
             </li>
             <!-- Menu Body -->

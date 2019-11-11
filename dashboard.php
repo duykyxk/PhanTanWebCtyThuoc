@@ -24,7 +24,7 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3><?php echo $catCount; ?></h3>
+            <h3><!-- <?php echo $catCount; ?> --></h3>
 
             <p>Tổng Category</p>
           </div>
@@ -39,7 +39,7 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-            <h3><?php echo $areaCount; ?><sup style="font-size: 20px"></sup></h3>
+            <h3><!-- <?php echo $areaCount; ?> --><sup style="font-size: 20px"></sup></h3>
 
             <p>Tổng Area</p>
           </div>
@@ -54,7 +54,7 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
-            <h3><?php echo $placeCount; ?><sup style="font-size: 20px"></sup></h3>
+            <h3><!-- <?php echo $placeCount; ?> --><sup style="font-size: 20px"></sup></h3>
 
             <p>Place</p>
           </div>
@@ -70,7 +70,7 @@
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
-           <h3><?php echo $uPlaceCount; ?><sup style="font-size: 20px"></sup></h3>
+           <h3><!-- <?php echo $uPlaceCount; ?> --><sup style="font-size: 20px"></sup></h3>
 
            <p>Tổng các UPlace</p>
          </div>
@@ -88,7 +88,7 @@
       <!-- small box -->
       <div class="small-box bg-aqua">
         <div class="inner">
-          <h3><?php echo $groupCount;?></h3>
+          <h3><!-- <?php echo $groupCount;?> --></h3>
 
           <p>Tổng Group</p>
         </div>
@@ -103,7 +103,7 @@
       <!-- small box -->
       <div class="small-box bg-green">
         <div class="inner">
-          <h3><?php echo $eventCount; ?><sup style="font-size: 20px"></sup></h3>
+          <h3><!-- <?php echo $eventCount; ?> --><sup style="font-size: 20px"></sup></h3>
 
           <p>Tổng Event</p>
         </div>
@@ -118,7 +118,7 @@
       <!-- small box -->
       <div class="small-box bg-yellow">
         <div class="inner">
-          <h3><?php ?><sup style="font-size: 20px"></sup></h3>
+          <h3><!-- <?php ?><sup style="font-size: 20px"> --></sup></h3>
 
           <p>Route</p>
         </div>
@@ -134,7 +134,7 @@
       <!-- small box -->
       <div class="small-box bg-red">
         <div class="inner">
-          <h3><?php echo $userCount; ?><sup style="font-size: 20px"></sup></h3>
+          <h3><!-- <?php echo $userCount; ?> --><sup style="font-size: 20px"></sup></h3>
 
           <p>Tài khoản</p>
         </div>
@@ -147,10 +147,6 @@
     </div>
   </div>
   <?php include 'scriptfooter.php';?>
-
-
-
-
   <?php  ?>   
 
 

@@ -8,7 +8,7 @@
           <img src="admin.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p><?php echo $_SESSION['name']?></p>
+          <p><!-- <?php echo $_SESSION['name']?> --></p>
           
         </div>
       </div>

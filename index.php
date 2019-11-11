@@ -1,40 +1,40 @@
 <?php 
-require_once 'config.php';
+// require_once 'config.php';
 //var_dump($_POST);
 session_start();
 if (empty($_SESSION['id']) && empty($_SESSION['name'])){
   if(isset($_POST['submit'])){
 
 
-   $user_email = $_POST['email'];
-  // $user_email=filter_var($user_email, FILTER_SANITIZE_EMAIL);
-   $password = $_POST['password'];
+  //  $user_email = $_POST['email'];
+  // // $user_email=filter_var($user_email, FILTER_SANITIZE_EMAIL);
+  //  $password = $_POST['password'];
 
-   if(!empty($user_email) && !empty($password) ){
+  //  if(!empty($user_email) && !empty($password) ){
 
-    $query = mysqli_query($conn,"SELECT * FROM `user` WHERE email like '".$user_email."'");
-    mysqli_num_rows($query);
-    if(mysqli_num_rows($query) > 0){
-      if($row = mysqli_fetch_array($query)){
-        if ($row['role'] == 0){
-          if(password_verify($password, $row['password'])){
-            $_SESSION['id'] = $row['id'];
-            $_SESSION['name']=$row['name'];
-            $_SESSION['cat1id']=$row['cat1id'];
-            $_SESSION['email']=$row['email'];
-            $_SESSION['role']=$row['role'];
+  //   $query = mysqli_query($conn,"SELECT * FROM `user` WHERE email like '".$user_email."'");
+  //   mysqli_num_rows($query);
+  //   if(mysqli_num_rows($query) > 0){
+  //     if($row = mysqli_fetch_array($query)){
+  //       if ($row['role'] == 0){
+  //         if(password_verify($password, $row['password'])){
+  //           $_SESSION['id'] = $row['id'];
+  //           $_SESSION['name']=$row['name'];
+  //           $_SESSION['cat1id']=$row['cat1id'];
+  //           $_SESSION['email']=$row['email'];
+  //           $_SESSION['role']=$row['role'];
             header("Location: dashboard.php");
-          }else $msg = 'Invalid  password';
+  //         }else $msg = 'Invalid  password';
 
-        }else $msg = 'Sorry you are not admin';
-      }}
-      else{
-       $msg = 'Invalid username or password';
-     }
-   }
-   else{
-    $msg = "Fields cannot be empty";
-  }
+  //       }else $msg = 'Sorry you are not admin';
+  //     }}
+  //     else{
+  //      $msg = 'Invalid username or password';
+  //    }
+  //  }
+  //  else{
+  //   $msg = "Fields cannot be empty";
+  // }
 }
 
 ?>
@@ -43,7 +43,7 @@ if (empty($_SESSION['id']) && empty($_SESSION['name'])){
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>City App Admin Panel | Log in</title>
+  <title>CTT App Admin Panel | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -72,7 +72,7 @@ if (empty($_SESSION['id']) && empty($_SESSION['name'])){
   <div class="login-box">
     <div class="login-logo">
       <img src="logo.png" height="100" width="100"><br>
-      <a href="login_pro.php"><b>City App Admin</b> Panel</a>
+      <a href="login_pro.php"><b>CTT App Admin</b> Panel</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

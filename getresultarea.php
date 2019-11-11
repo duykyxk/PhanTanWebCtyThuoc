@@ -1,5 +1,5 @@
 <?php
-require_once("config.php");
+// require_once("config.php");
 require_once("pagination.class.php");
 $db_handle = new DBController();
 $perPage = new PerPage();
